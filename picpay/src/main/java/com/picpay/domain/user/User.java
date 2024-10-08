@@ -1,11 +1,7 @@
 package com.picpay.domain.user;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.usertype.UserType;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -14,6 +10,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
 
 public class User {
@@ -29,7 +26,8 @@ public class User {
     private String email;
     private String password;
     private BigDecimal balance;
+
     @Enumerated(EnumType.STRING)
-    public UserType userType;
+    private UserType userType;
 
 }
