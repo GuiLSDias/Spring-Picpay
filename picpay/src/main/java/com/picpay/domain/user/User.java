@@ -30,5 +30,6 @@ public class User {
     private String password;
     private BigDecimal balance;
     @Enumerated(EnumType.STRING)
-    private UserType userType;
+    public UserType userType;
+
 }
